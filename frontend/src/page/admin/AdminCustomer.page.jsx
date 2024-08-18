@@ -95,7 +95,7 @@ const AdminCustomerPage = () => {
 
   return (
     <LoadingComponent isLoading={isLoading}>
-      <div className=" p-5 shadow h-screen">
+      <div className=" p-5 shadow h-screen dark:bg-slate-900 dark:text-slate-200">
         <div className=" flex items-center justify-between">
           <h1 className=" text-lg font-semibold">Users</h1>
           <div>
@@ -149,7 +149,7 @@ const AdminCustomerPage = () => {
                       <Button
                         onClick={() => deleteUserHandler(user?._id)}
                         size="sm"
-                        className=" bg-red-600"
+                        className=" bg-red-600 dark:bg-slate-950 dark:text-slate-200 dark:border dark:border-l-slate-600 dark:hover:bg-slate-900"
                       >
                         Delete
                       </Button>

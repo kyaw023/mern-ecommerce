@@ -176,7 +176,7 @@ const AdminBrandPage = () => {
   };
 
   return (
-    <div className=" p-5">
+    <div className=" h-screen dark:bg-slate-900 px-4 py-2 dark:text-slate-200">
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <div className=" flex items-center justify-between">
           <h1 className=" text-xl font-semibold">Brand</h1>
@@ -207,7 +207,7 @@ const AdminBrandPage = () => {
             />
           </div>
           <Button
-            className=" cursor-pointer active:scale-105 transition duration-200"
+            className=" cursor-pointer active:scale-105 transition duration-200 dark:bg-slate-950 dark:text-slate-200 dark:hover:bg-slate-800"
             type="submit"
           >
             search
@@ -257,7 +257,7 @@ const AdminBrandPage = () => {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className=" w-full active:scale-110"
+                          className=" w-full active:scale-110 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                         >
                           Saved changes
                           {isSubmitting && (
@@ -296,6 +296,7 @@ const AdminBrandPage = () => {
                       onClick={() => editHandler(b)}
                       size="sm"
                       className=" bg-blue-500"
+                      variant="outline"
                     >
                       {" "}
                       <Pencil size={15} className=" me-1 " />
@@ -304,7 +305,7 @@ const AdminBrandPage = () => {
                     <Button
                       onClick={() => deleteBrand(b?._id)}
                       size="sm"
-                      className="bg-red-500"
+                      className="bg-red-500  dark:bg-red-600 dark:text-slate-200  dark:hover:bg-red-700"
                     >
                       <Trash size={15} className="" />
                     </Button>

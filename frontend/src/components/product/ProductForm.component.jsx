@@ -78,11 +78,17 @@ const ProductFormComponent = ({
                 />
 
                 <div className="">
-                  <Label htmlFor="name" className="text-right">
+                  <Label
+                    htmlFor="name"
+                    className="text-right dark:text-slate-100"
+                  >
                     Category
                   </Label>
-                  <Select onValueChange={selectHandler}>
-                    <SelectTrigger className="">
+                  <Select
+                    className=" dark:text-slate-100"
+                    onValueChange={selectHandler}
+                  >
+                    <SelectTrigger className=" dark:text-slate-100">
                       <SelectValue
                         placeholder="Select a category"
                         value={selectedValue}
@@ -90,7 +96,11 @@ const ProductFormComponent = ({
                     </SelectTrigger>
                     <SelectContent>
                       {categoriesOptions.map((category) => (
-                        <SelectItem key={category?._id} value={category?._id}>
+                        <SelectItem
+                          className=" dark:text-slate-100"
+                          key={category?._id}
+                          value={category?._id}
+                        >
                           {category?.name}
                         </SelectItem>
                       ))}
@@ -98,11 +108,14 @@ const ProductFormComponent = ({
                   </Select>
                 </div>
                 <div className="">
-                  <Label htmlFor="name" className="text-right">
+                  <Label
+                    htmlFor="name"
+                    className="text-right dark:text-slate-100"
+                  >
                     Brand
                   </Label>
                   <Select onValueChange={selectBrandHandler}>
-                    <SelectTrigger className="">
+                    <SelectTrigger className=" dark:text-slate-100">
                       <SelectValue
                         placeholder="Select a brand"
                         value={selectBrand}
@@ -147,7 +160,7 @@ const ProductFormComponent = ({
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className=" w-full active:scale-110"
+                    className=" w-full active:scale-110 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                   >
                     {isEdit ? "Update" : "Saved"}
                     {isSubmitting && (
@@ -164,9 +177,11 @@ const ProductFormComponent = ({
       {/* login image */}
       <div className=" flex flex-col">
         <div>
-          <Label htmlFor="image">Upload Image</Label>
+          <Label className=" dark:text-slate-200" htmlFor="image">
+            Upload Image
+          </Label>
           <Input
-            className=" mt-2"
+            className=" mt-2 dark:text-slate-200"
             type="file"
             name="image"
             onChange={uploadHandler}
@@ -179,10 +194,12 @@ const ProductFormComponent = ({
           </div>
 
           <div>
-            <Label htmlFor="images">Upload Sub Image</Label>
+            <Label className="dark:text-slate-200" htmlFor="images">
+              Upload Sub Image
+            </Label>
             <Input
               multiple
-              className=" mt-2"
+              className=" mt-2 dark:text-slate-200"
               type="file"
               name="images"
               onChange={uploadSubImagesHandler}

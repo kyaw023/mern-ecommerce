@@ -11,7 +11,7 @@ const AdminDeliveryPage = () => {
   }, [data]);
   return (
     <LoadingComponent isLoading={isLoading}>
-      <section className="bg-gray-50 dark:bg-gray-900 p-5 sm:py-5">
+      <section className="bg-gray-50 dark:bg-gray-900 p-5 sm:py-5 h-screen">
         <div className="">
           <div className="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
             <div className="flex flex-col px-4 py-3 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4">

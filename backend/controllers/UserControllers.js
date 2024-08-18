@@ -253,8 +253,7 @@ const UserControllers = {
     // get  productID
     const productId = req.params.productId;
 
-    console.log(productId);
-
+    
     // check  id is valid
     if (!mongoose.Types.ObjectId.isValid(productId)) {
       return res.status(400).json({ msg: "Not Valid Product Id" });

@@ -330,7 +330,7 @@ const AdminProductPage = () => {
   return (
     <LoadingComponent isLoading={loading}>
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <div className=" p-5 shadow h-[1000px]">
+        <div className=" p-5 shadow h-[1000px] dark:bg-slate-900 dark:text-slate-200">
           <div className=" flex items-center justify-between">
             <h1 className=" text-lg font-semibold">Products</h1>
             <div>

@@ -200,14 +200,16 @@ const AdminCategoryPage = () => {
     setSearchValue("");
   };
   return (
-    <div className=" p-5">
+    <div className="h-screen dark:bg-slate-900 px-4 py-2">
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <div className=" flex items-center justify-between">
-          <h1 className=" text-xl font-semibold">Category</h1>
+          <h1 className=" text-xl font-semibold dark:text-slate-100">
+            Category
+          </h1>
           <Button
             onClick={() => setIsDialogOpen(true)}
             size="sm"
-            className=" bg-blue-500 rounded-xl hover:bg-blue-400"
+            className=" bg-blue-500 rounded-xl hover:bg-blue-400 dark:bg-slate-950 dark:text-slate-200 dark:hover:bg-slate-800"
           >
             + New Category
           </Button>
@@ -223,7 +225,7 @@ const AdminCategoryPage = () => {
               onChange={handleSearchValue}
               size="sm"
               placeholder="search categories"
-              className="w-60 pl-10 pr-3 py-2 rounded-xl border border-gray-300"
+              className="w-60 pl-10 pr-3 py-2 rounded-xl border border-gray-300 dark:text-slate-200"
             />
             <FaSearch
               size={15}
@@ -231,7 +233,7 @@ const AdminCategoryPage = () => {
             />
           </div>
           <Button
-            className=" cursor-pointer active:scale-105 transition duration-200"
+            className=" cursor-pointer active:scale-105 transition duration-200 dark:bg-slate-950 dark:text-slate-200 dark:hover:bg-slate-800"
             type="submit"
           >
             search
@@ -290,11 +292,17 @@ const AdminCategoryPage = () => {
                       />
 
                       <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
+                        <Label
+                          htmlFor="name"
+                          className="text-right dark:text-slate-300"
+                        >
                           Active
                         </Label>
-                        <Select onValueChange={selectHandler}>
-                          <SelectTrigger className="w-[180px]">
+                        <Select
+                          className="dark:text-slate-200"
+                          onValueChange={selectHandler}
+                        >
+                          <SelectTrigger className="w-[180px] dark:text-slate-200">
                             <SelectValue
                               placeholder="Active"
                               value={selectedValue}
@@ -311,7 +319,7 @@ const AdminCategoryPage = () => {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className=" w-full active:scale-110"
+                          className=" w-full active:scale-110 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                         >
                           Saved changes
                           {isSubmitting && (
@@ -328,10 +336,10 @@ const AdminCategoryPage = () => {
         </DialogContent>
 
         <LoadingComponent isLoading={isLoading}>
-          <Table>
+          <Table className="dark:text-slate-200">
             <TableHeader>
               <TableRow>
-                <TableHead className=" w-[200">Name</TableHead>
+                <TableHead className=" w-[200px]">Name</TableHead>
                 <TableHead>Featured</TableHead>
                 <TableHead>Products</TableHead>
                 <TableHead>Status</TableHead>
@@ -353,6 +361,7 @@ const AdminCategoryPage = () => {
                       <Button
                         onClick={() => editHandler(category)}
                         size="sm"
+                        variant="outline"
                         className=" bg-blue-500"
                       >
                         {" "}
@@ -362,7 +371,7 @@ const AdminCategoryPage = () => {
                       <Button
                         onClick={() => deleteCategory(category?._id)}
                         size="sm"
-                        className="bg-red-500"
+                        className="bg-red-500  dark:bg-red-600 dark:text-slate-200  dark:hover:bg-red-700"
                       >
                         <Trash size={15} className="" />
                       </Button>
@@ -374,9 +383,9 @@ const AdminCategoryPage = () => {
           </Table>
         </LoadingComponent>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between dark:bg-slate-900">
           <p className="w-full text-sm text-slate-400 px-4">page 1 of 2</p>
-          <Pagination>
+          <Pagination className={"dark:text-slate-200"}>
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious href="#" />

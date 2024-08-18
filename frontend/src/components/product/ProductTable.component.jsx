@@ -55,7 +55,7 @@ const ProductTableComponent = ({ state, editHandler, deleteHandler }) => {
                     <Button
                       onClick={() => deleteHandler(product?._id)}
                       size="sm"
-                      className=" bg-red-600"
+                      className=" bg-red-600 dark:bg-red-600 dark:text-slate-200  dark:hover:bg-red-700"
                     >
                       Delete
                     </Button>
