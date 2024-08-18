@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html, body {
+  font-family: 'Lato', sans-serif;
+} */
+
+.active {
+  @apply text-green-400;
+}
+
+/* Ensure dark mode styles are applied to autofilled inputs */
+
+
+/* Dropdown closed state */
+.hidden {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Dropdown open state */
+.visible {
+  max-height: 500px; /* Adjust max-height based on the content */
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
